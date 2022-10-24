@@ -83,7 +83,7 @@ if __name__ == "__main__":
     # parse some parameters passed
     parser = argparse.ArgumentParser(description="Simple port scanner")
     parser.add_argument("host", help="Host scan.")
-    parser.add_argument("--ports", "-p", dest="port_range", default="1-10000", help="Port range to scan, default is 1-10000")
+    parser.add_argument("--ports", "-p", dest="port_range", default="1-65535", help="Port range to scan, default is 1-65535 (all ports)")
     args = parser.parse_args()
     host, port_range = args.host, args.port_range
 
